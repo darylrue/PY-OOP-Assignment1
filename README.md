@@ -31,8 +31,17 @@
 
 6. Run the test functions for each of your classes and make sure that all tests pass.
 
-    - test_calculator()
-    - test_scientific_calculator()
-    - test_business_calculator()
-    - test_graphing_calculator()
-    - test_all()  (this one runs all the tests for all four calculators)
+    Full test suite is located in `calulator_tests.py`.
+
+    ## All Tests
+    - `python3 -m unittest calculator_tests`
+
+    ## Test a Specific Calculator
+    - `python -m unittest calculator_tests.BasicCalculatorTest`
+    - `python -m unittest calculator_tests.BusinessCalculatorTest`
+    - `python -m unittest calculator_tests.GraphingCalculatorTest`
+    - `python -m unittest calculator_tests.ScientificCalculator`
+
+
+    ## Test a Specific Calculator Function
+    - `python -m unittest calculator_tests.BasicCalculatorTest.test_add`
