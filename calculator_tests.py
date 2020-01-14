@@ -64,7 +64,7 @@ class GraphingCalculatorTest(ScientificCalculatorTest, BusinessCalculatorTest):
 
     def _test_repeat_last_answer(self, last_answer):
         self.assertIsInstance(self.calculator.repeat_last_answer(), str)
-        self.assertTrue(last_answer in self.calculator.repeat_last_answer())
+        self.assertTrue(str(last_answer) in self.calculator.repeat_last_answer())
 
     def test_graph(self):
         self.assertIsInstance(self.calculator.graph('3x + 2'), str)
