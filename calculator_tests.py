@@ -1,4 +1,5 @@
 import unittest
+import math
 
 from calculator import BusinessCalculator, Calculator, GraphingCalculator, ScientificCalculator
 
@@ -36,7 +37,7 @@ class BusinessCalculatorTest(BasicCalculatorTest):
 
     def test_plus_tax(self):
         self.assertEqual(self.calculator.plus_tax(100), 107)
-        self.assertEqual(self.calculator.plus_tax(10), 10.7)
+        self.assertEqual(round(self.calculator.plus_tax(10), 3), round(10.7, 3))
         self._test_repeat_last_answer(10.7)
 
 class ScientificCalculatorTest(BasicCalculatorTest):
