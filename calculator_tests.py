@@ -30,8 +30,8 @@ class BusinessCalculatorTest(BasicCalculatorTest):
         self.calculator = BusinessCalculator()
 
     def test_minus_percent(self):
-        self.assertEqual(self.calculator.minus_precent(100, 5), 95)
-        self.assertEqual(self.calculator.minus_precent(25, 20), 20)
+        self.assertEqual(self.calculator.minus_percent(100, 5), 95)
+        self.assertEqual(self.calculator.minus_percent(25, 20), 20)
         self._test_repeat_last_answer(20)
 
     def test_plus_tax(self):
@@ -64,7 +64,7 @@ class GraphingCalculatorTest(ScientificCalculatorTest, BusinessCalculatorTest):
 
     def _test_repeat_last_answer(self, last_answer):
         self.assertIsInstance(self.calculator.repeat_last_answer(), str)
-        self.assertTrue(last_answer in self.calculator.repeat_last_answer())
+        self.assertTrue(str(last_answer) in self.calculator.repeat_last_answer())
 
     def test_graph(self):
         self.assertIsInstance(self.calculator.graph('3x + 2'), str)
