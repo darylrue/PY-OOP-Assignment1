@@ -30,8 +30,8 @@ class BusinessCalculatorTest(BasicCalculatorTest):
         self.calculator = BusinessCalculator()
 
     def test_minus_percent(self):
-        self.assertEqual(self.calculator.minus_precent(100, 5), 95)
-        self.assertEqual(self.calculator.minus_precent(25, 20), 20)
+        self.assertEqual(self.calculator.minus_percent(100, 5), 95)
+        self.assertEqual(self.calculator.minus_percent(25, 20), 20)
         self._test_repeat_last_answer(20)
 
     def test_plus_tax(self):
